@@ -1,4 +1,6 @@
+import { useState } from "react";
 import Header from "./Header";
+
 
 function Input({ inputType, label }) {
   return (
@@ -9,7 +11,24 @@ function Input({ inputType, label }) {
   );
 }
 
+function Result() {
+  return (
+    <table>
+      <tbody>
+        <thead>
+          <td>Year</td>
+          <td>Investment Value</td>
+          <td>Interest(Year)</td>
+          <td>Total Interest</td>
+          <td>Invested Capital</td>
+        </thead>
+      </tbody>
+    </table>
+  );
+}
+
 function App() {
+  // const [annualData, setAnnualData] = useState()
   return (
     <>
       <Header />
@@ -22,6 +41,10 @@ function App() {
           <Input label="Annual Investment" inputType="text" />
           <Input label="Duration" inputType="text" />
         </div>
+      </div>
+
+      <div id="result">
+        <Result />
       </div>
     </>
   );
