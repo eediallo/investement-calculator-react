@@ -20,11 +20,11 @@ function App() {
     });
   }
   return (
-    <>
+    <div className="App">
       <Header />
       <UserInput onChange={handleChange} userInput={userInput} />
       <Results input={userInput} />
-    </>
+    </div>
   );
 }
 
