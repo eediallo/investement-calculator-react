@@ -43,11 +43,9 @@ body {
   display: flex;
   justify-content: space-evenly;
   gap: 1.5rem;
-  background-color: #2b996d;
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 0 20px;
 }
+
+
 
 #user-input label {
   display: block;
