@@ -1,11 +1,12 @@
 import { calculateInvestmentResults, formatter } from "../util/investment.js";
 
 export default function Results({ input }) {
-  const resultsData = calculateInvestmentResults(input);
+  let results = []
+  calculateInvestmentResults(input, results);
   const initialInverstment =
-    resultsData[0].valueEndOfYear -
-    resultsData[0].interest -
-    resultsData[0].annualInvestment;
+    results[0].valueEndOfYear -
+    results[0].interest -
+    results[0].annualInvestment;
 
   return (
     <section id="result">
@@ -20,7 +21,7 @@ export default function Results({ input }) {
           </tr>
         </thead>
         <tbody>
-          {resultsData.map((result) => {
+          {results.map((result) => {
             let totalInterest =
               result.valueEndOfYear -
               result.annualInvestment * result.year -
